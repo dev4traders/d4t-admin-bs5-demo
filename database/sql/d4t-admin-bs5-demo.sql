@@ -1,6 +1,6 @@
 /*
 SQLyog Ultimate v13.1.1 (64 bit)
-MySQL - 8.0.31-23 : Database - d4t-admin-adminlte-demo
+MySQL - 8.0.31-23 : Database - d4t-admin-bs5-demo
 *********************************************************************
 */
 
@@ -12,9 +12,9 @@ MySQL - 8.0.31-23 : Database - d4t-admin-adminlte-demo
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
-CREATE DATABASE /*!32312 IF NOT EXISTS*/`d4t-admin-adminlte-demo` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+CREATE DATABASE /*!32312 IF NOT EXISTS*/`d4t-admin-bs5-demo` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
 
-USE `d4t-admin-adminlte-demo`;
+USE `d4t-admin-bs5-demo`;
 
 /*Table structure for table `authentication_log` */
 
@@ -33,12 +33,15 @@ CREATE TABLE `authentication_log` (
   `location` json DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `authentication_log_authenticatable_type_authenticatable_id_index` (`authenticatable_type`,`authenticatable_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3662 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3665 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 /*Data for the table `authentication_log` */
 
 insert  into `authentication_log`(`id`,`authenticatable_type`,`authenticatable_id`,`ip_address`,`user_agent`,`login_at`,`login_successful`,`logout_at`,`cleared_by_user`,`location`) values 
-(3661,'Dcat\\Admin\\Models\\Administrator',1,'127.0.0.1','Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:121.0) Gecko/20100101 Firefox/121.0','2024-01-06 10:41:34',1,NULL,0,'{\"ip\": \"127.0.0.0\", \"lat\": 41.31, \"lon\": -72.92, \"city\": \"New Haven\", \"state\": \"CT\", \"cached\": false, \"country\": \"United States\", \"default\": true, \"currency\": \"USD\", \"iso_code\": \"US\", \"timezone\": \"America/New_York\", \"continent\": \"NA\", \"state_name\": \"Connecticut\", \"postal_code\": \"06510\"}');
+(3661,'Dcat\\Admin\\Models\\Administrator',1,'127.0.0.1','Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:121.0) Gecko/20100101 Firefox/121.0','2024-01-06 10:41:34',1,NULL,0,'{\"ip\": \"127.0.0.0\", \"lat\": 41.31, \"lon\": -72.92, \"city\": \"New Haven\", \"state\": \"CT\", \"cached\": false, \"country\": \"United States\", \"default\": true, \"currency\": \"USD\", \"iso_code\": \"US\", \"timezone\": \"America/New_York\", \"continent\": \"NA\", \"state_name\": \"Connecticut\", \"postal_code\": \"06510\"}'),
+(3662,'Dcat\\Admin\\Models\\Administrator',1,'127.0.0.1','Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:121.0) Gecko/20100101 Firefox/121.0','2024-01-06 13:06:33',1,NULL,0,'{\"ip\": \"127.0.0.0\", \"lat\": 41.31, \"lon\": -72.92, \"city\": \"New Haven\", \"state\": \"CT\", \"cached\": false, \"country\": \"United States\", \"default\": true, \"currency\": \"USD\", \"iso_code\": \"US\", \"timezone\": \"America/New_York\", \"continent\": \"NA\", \"state_name\": \"Connecticut\", \"postal_code\": \"06510\"}'),
+(3663,'Dcat\\Admin\\Models\\Administrator',1,'127.0.0.1','Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:121.0) Gecko/20100101 Firefox/121.0','2024-01-06 13:18:10',1,NULL,0,'{\"ip\": \"127.0.0.0\", \"lat\": 41.31, \"lon\": -72.92, \"city\": \"New Haven\", \"state\": \"CT\", \"cached\": false, \"country\": \"United States\", \"default\": true, \"currency\": \"USD\", \"iso_code\": \"US\", \"timezone\": \"America/New_York\", \"continent\": \"NA\", \"state_name\": \"Connecticut\", \"postal_code\": \"06510\"}'),
+(3664,'Dcat\\Admin\\Models\\Administrator',1,'127.0.0.1','Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:121.0) Gecko/20100101 Firefox/121.0','2024-01-06 15:25:39',1,NULL,0,'{\"ip\": \"127.0.0.0\", \"lat\": 41.31, \"lon\": -72.92, \"city\": \"New Haven\", \"state\": \"CT\", \"cached\": false, \"country\": \"United States\", \"default\": true, \"currency\": \"USD\", \"iso_code\": \"US\", \"timezone\": \"America/New_York\", \"continent\": \"NA\", \"state_name\": \"Connecticut\", \"postal_code\": \"06510\"}');
 
 /*Table structure for table `controller_help_topics` */
 
@@ -118,7 +121,7 @@ CREATE TABLE `domain_hosts` (
 /*Data for the table `domain_hosts` */
 
 insert  into `domain_hosts`(`id`,`domain_id`,`host`,`created_at`,`updated_at`,`app`,`schema`) values 
-(1,1,'d4t-admin-adminlte-demo.local',NULL,NULL,'admin',NULL);
+(1,1,'d4t-admin-bs5-demo.local',NULL,NULL,'admin',NULL);
 
 /*Table structure for table `domain_mail_templates` */
 
@@ -394,7 +397,7 @@ CREATE TABLE `domains` (
 /*Data for the table `domains` */
 
 insert  into `domains`(`id`,`host_base`,`manager_id`,`created_at`,`updated_at`) values 
-(1,'d4t-admin-adminlte-demo.local',1,'2023-11-03 17:54:44',NULL);
+(1,'d4t-admin-bs5-demo.local',1,'2023-11-03 17:54:44',NULL);
 
 /*Table structure for table `extension_histories` */
 
@@ -410,12 +413,11 @@ CREATE TABLE `extension_histories` (
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `admin_extension_histories_name_index` (`name`)
-) ENGINE=InnoDB AUTO_INCREMENT=85 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=88 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 /*Data for the table `extension_histories` */
 
 insert  into `extension_histories`(`id`,`name`,`type`,`version`,`detail`,`created_at`,`updated_at`) values 
-(6,'dev4traders.d4t-admin-ui-dcat-adminlte',1,'1.0.1','First','2023-12-18 15:02:54','2023-12-18 15:02:54'),
 (7,'dev4traders.d4t-admin-dark-switcher',1,'1.0.1','First','2023-12-18 16:18:40','2023-12-18 16:18:40'),
 (8,'dev4traders.d4t-admin-theme-gradient',1,'1.0.1','First','2023-12-18 16:19:17','2023-12-18 16:19:17'),
 (11,'weiwait.dcat-cropper',1,'1.0.0','支持单图裁剪','2023-12-19 05:41:18','2023-12-19 05:41:18'),
@@ -453,7 +455,10 @@ insert  into `extension_histories`(`id`,`name`,`type`,`version`,`detail`,`create
 (66,'canbez.dcat-theme',1,'1.0.4','修复菜单初始化在第三方站点跳转进入后的bug','2023-12-21 11:47:12','2023-12-21 11:47:12'),
 (67,'dev4traders.d4t-admin-wordpress-sso',1,'1.0.1','First','2023-12-21 13:19:09','2023-12-21 13:19:09'),
 (70,'dev4traders.d4t-admin-helpers',1,'1.0.1','First','2023-12-29 10:04:31','2023-12-29 10:04:31'),
-(84,'dev4traders.d4t-admin-demos',1,'1.0.1','First','2023-12-31 05:04:32','2023-12-31 05:04:32');
+(84,'dev4traders.d4t-admin-demos',1,'1.0.1','First','2023-12-31 05:04:32','2023-12-31 05:04:32'),
+(85,'dev4traders.d4t-admin-ui-sneat',1,'1.0.1','First','2024-01-06 13:18:15','2024-01-06 13:18:15'),
+(86,'dev4traders.d4t-admin-ui-dcat-adminlte',1,'1.0.1','First','2024-01-06 15:05:54','2024-01-06 15:05:54'),
+(87,'dev4traders.d4t-admin-ui-bs5',1,'1.0.1','First','2024-01-06 15:30:36','2024-01-06 15:30:36');
 
 /*Table structure for table `extensions` */
 
@@ -469,12 +474,11 @@ CREATE TABLE `extensions` (
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `admin_extensions_name_unique` (`name`)
-) ENGINE=InnoDB AUTO_INCREMENT=52 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=55 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 /*Data for the table `extensions` */
 
 insert  into `extensions`(`id`,`name`,`version`,`is_enabled`,`options`,`created_at`,`updated_at`) values 
-(6,'dev4traders.d4t-admin-ui-dcat-adminlte','1.0.1',1,NULL,'2023-12-18 15:02:55','2023-12-21 11:47:00'),
 (18,'dev4traders.d4t-admin-lang-selector','1.0.1',1,NULL,'2023-12-19 20:47:44','2023-12-19 20:47:45'),
 (21,'dev4traders.d4t-admin-lang-helpers','1.0.1',1,NULL,'2023-12-20 15:28:06','2023-12-20 15:28:08'),
 (24,'dev4traders.d4t-admin-operation-log','1.0.0',1,NULL,'2023-12-20 15:39:28','2023-12-20 15:39:29'),
@@ -482,7 +486,10 @@ insert  into `extensions`(`id`,`name`,`version`,`is_enabled`,`options`,`created_
 (33,'canbez.dcat-theme','1.0.4',0,NULL,'2023-12-21 11:47:12','2023-12-31 05:28:37'),
 (34,'dev4traders.d4t-admin-wordpress-sso','1.0.1',1,NULL,'2023-12-21 13:19:09','2023-12-21 13:19:10'),
 (37,'dev4traders.d4t-admin-helpers','1.0.1',1,NULL,'2023-12-29 10:04:31','2023-12-29 13:06:49'),
-(51,'dev4traders.d4t-admin-demos','1.0.1',1,NULL,'2023-12-31 05:04:32','2023-12-31 05:04:34');
+(51,'dev4traders.d4t-admin-demos','1.0.1',1,NULL,'2023-12-31 05:04:32','2023-12-31 05:04:34'),
+(52,'dev4traders.d4t-admin-ui-sneat','1.0.1',0,NULL,'2024-01-06 13:18:15','2024-01-06 15:25:54'),
+(53,'dev4traders.d4t-admin-ui-dcat-adminlte','1.0.1',0,NULL,'2024-01-06 15:05:54','2024-01-06 15:33:05'),
+(54,'dev4traders.d4t-admin-ui-bs5','1.0.1',1,NULL,'2024-01-06 15:30:36','2024-01-06 15:30:51');
 
 /*Table structure for table `help_categories` */
 
